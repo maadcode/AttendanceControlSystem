@@ -1,0 +1,66 @@
+name: "🐞 Reporte de Bug"
+description: "Informa sobre un error en el sistema"
+title: "[BUG] "
+labels: [bug]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: "Gracias por reportar este problema. Por favor, completa los siguientes campos."
+
+  - type: input
+    id: sistema
+    attributes:
+      label: "🔍 Sistema Operativo"
+      placeholder: "Ejemplo: Windows 11 / Ubuntu 22.04"
+    validations:
+      required: true
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: "📌 Descripción del problema"
+      description: "Explica claramente el error y cómo reproducirlo."
+      placeholder: "Cuando hago X, ocurre Y..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: pasos
+    attributes:
+      label: "⚡ Pasos para reproducirlo"
+      description: "Lista los pasos exactos para que podamos replicarlo."
+      placeholder: |
+        1. Ir a...
+        2. Hacer clic en...
+        3. Ocurre el error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: esperado
+    attributes:
+      label: "✅ Comportamiento esperado"
+      description: "¿Qué debería haber pasado en lugar del error?"
+      placeholder: "El sistema debería haber hecho..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: "📸 Capturas de pantalla o logs"
+      description: "Sube imágenes o logs si ayudan a entender el problema."
+
+  - type: dropdown
+    id: severidad
+    attributes:
+      label: "🔥 Severidad"
+      description: "Qué tan grave es el problema?"
+      options:
+        - "Menor"
+        - "Moderado"
+        - "Crítico"
+    validations:
+      required: true
